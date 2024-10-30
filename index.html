@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malware Detection</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-column justify-content-center">
+            <div class="container">
+                <h1>Malware Detection</h1>
+                <p>Select any type of file you want to upload for malware detection:</p>
+                
+                <form id="file-form">
+                    <label for="fileInput" class="file-label">Choose File:</label>
+                    <input type="file" id="fileInput">
+                    <button type="submit">Scan for Malware</button>
+                    <p id="message"></p>
+                </form>
+
+                <div id="overlay"></div>
+                    <div id="dialog">
+                        <h2 id="dialogHeading">The file is being scanned for malware...</h2>
+                        <div id="spinner" class="spinner"></div>
+                        <div id="content" style="display: none;">No Malware Detected!</div>
+                        <button onclick="closeDialog()">Close</button>
+                    </div>
+                </div>        
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
